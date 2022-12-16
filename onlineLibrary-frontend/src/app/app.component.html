@@ -1,0 +1,5 @@
+<p *ngIf="!cookieEnabled">
+    Cookie disabled. Please enable in browser settings and reload page.
+</p>
+
+<router-outlet *ngIf="cookieEnabled"></router-outlet>
