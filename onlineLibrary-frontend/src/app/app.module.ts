@@ -7,13 +7,14 @@ import { LoginComponent } from './auth/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule }   from '@angular/common/http';
 import { RegisterComponent } from './auth/register/register.component';
+import { MustMatchDirective } from './auth/directive/must-match.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    RegisterComponent
+    MustMatchDirective
   ],
   imports: [
     BrowserModule,
