@@ -13,9 +13,11 @@ export function MustMatch(controlName: string, matchingControlName: string): (fo
             return null;
         }
 
-        if (control.value !== matchingControl.valid) {
+        if (control.value !== matchingControl.value) {
+            console.log("control.value = " + control.value + " matchingControl.valid = " + matchingControl.valid)
             matchingControl.setErrors({ mustMatch: true })
         } else {
+            console.log("FALSE")
             matchingControl.setErrors(null)
         }
     }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Route } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { AuthService, User } from '../service/auth.service';
 
 @Component({
@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
-    // private router: Route,
+    private router: Router,
     private authServce: AuthService
   ) {
     
@@ -70,8 +70,7 @@ export class RegisterComponent implements OnInit {
         this.isLoading = false;
         this.error = null;
 
-        // // показываем пользователю информацию на новой странице
-        // this.router.navigate(['/info-page', {msg: 'Вам отправлено письмо для подтверждения аккаунта. Проверьте почту через 1-2 мин.'}]);
+        this.router.navigate(['/info-page', {msg: 'An email has been sent to you to verify your account. Check your mail in 1-2 minutes.'}]);
       },
       err => {
         this.isLoading = false;
