@@ -21,7 +21,8 @@
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0",
-    "bootstrap-css-only": "^4.4.1"
+    "bootstrap-css-only": "^4.4.1",
+    "ngx-device-detector": "4.0.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.0.1",

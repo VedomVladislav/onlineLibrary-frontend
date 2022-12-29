@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -35,6 +35,11 @@ export class AuthService {
 
    public sendResetPassword(email: String): Observable<boolean> {
     return this.httpClient.post<boolean>(this.backendAuthURI + '/send-reset-password-email', email);
+   }
+
+   public updatePassword(password: string, token: string): Observable<boolean> {
+    const tokenParam = new HttpParams().set('token', token);
+    return this.httpClient.post<boolean>(this.backendAuthURI + '/update-password', password, {params: tokenParam});
    }
 }
 

@@ -5,7 +5,8 @@ import { ActivateAccountComponent } from './auth/activate-account/activate-accou
 import { InfoPageComponent } from './auth/info-page/info-page.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { SendEmailResetPasswordComponent } from './auth/reset-password/send-email-reset-password/send-email-reset-password.component';
+import { SendEmailResetPasswordComponent } from './auth/reset-password/send-email/send-email-reset-password.component';
+import { UpdatePasswordComponent } from './auth/reset-password/update/update-password/update-password.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent, pathMatch: 'full'},
   {path: 'info-page', component: InfoPageComponent},
   {path: 'activate-account/:uuid', component: ActivateAccountComponent},
-  {path: 'reset-password', component: SendEmailResetPasswordComponent}
+  {path: 'reset-password', component: SendEmailResetPasswordComponent},
+  {path: 'update-password/:token', component: UpdatePasswordComponent}
 ];
 
 @NgModule({

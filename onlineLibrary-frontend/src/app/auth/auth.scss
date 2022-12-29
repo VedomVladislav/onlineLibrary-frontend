@@ -666,12 +666,14 @@ a.underline{
 
 }
 
-
-
-
 .btn:hover{
     background-color: rgba(31,129,214,0.93) !important;
     color:white !important;
+}
+
+.mobile-btn {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 

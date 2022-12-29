@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "bootstrap-css-only": "^4.4.1"
+    "bootstrap-css-only": "^4.4.1",
+    "ngx-device-detector": "^4.0.1"
   }
 }
